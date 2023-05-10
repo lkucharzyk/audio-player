@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <script src="https://kit.fontawesome.com/af7c1bebca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href='./css/music-player.css'>
+</head>
+<body>
+    <audio id='s1' src="./music/Dancin' in the ruins.mp3"></audio>
+    <audio id='s2' src="./music/Take Your Love Away.mp3"></audio>
+    <audio id='s3' src="./music/Frost And Fire.mp3"></audio>
+
+    <div class='full-screen'>
+        <div class="full-screen-inner">
+            <div id='player'>
+                <div id='player-controls'>
+                    <i class="fas fa-angle-left"></i>
+                    <i id='ppb' class="fas fa-play"></i>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div id='bars'>
+                    <div id='timebar-sec' class="bar-sec">
+                        <div id="currentTime" class="time"></div>
+                            <input
+                                class="bar"
+                                type="range"
+                                id="progress-bar"
+                                min="0"
+                                max=""
+                                value="0"
+                                onchange="changeProgressBar()"
+                            />
+                        <div id="durationTime" class="time"></div>
+                    </div>
+                    <div id='volumebar-sec' class="bar-sec">
+                        <div class="speaker">
+                            <i class="fas fa-volume-down"></i>
+                        </div>
+                        <input type="range" class="bar" id="volume-bar" min="0" max="1" value="0.5" step="0.01">
+                        <div class="speaker">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id='playlist-top'>
+                    <i class="fas fa-angle-down"></i>
+                    <p id="cur-s-name"></p>
+                </div>
+                <div id='playlist-bot' class="playlist-bot-hide">
+
+                </div>
+            </div>
+        </div>    
+    </div>
+    <script src="music-player.js"></script>
+</body>
+</html>
